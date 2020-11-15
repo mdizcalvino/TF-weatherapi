@@ -19,7 +19,7 @@ variable "arm_subscription_id" {
 
 variable "imagebuild" {
     type = string 
-    desdescription = "Latest Image Build"   
+    description = "Latest Image Build"   
 }
 
 
