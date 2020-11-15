@@ -17,6 +17,11 @@ variable "arm_subscription_id" {
   
 }
 
+variable "imagebuild" {
+    type = string 
+    desdescription = "Latest Image Build"   
+}
+
 
 provider "azurerm" {
     version = "2.5.0"
@@ -51,7 +56,7 @@ resource  "azurerm_container_group" "tfcg_test" {
 
    container {
        name = "weatherapi"
-       image = "maemedocker/weatherapi"
+       image = "maemedocker/weatherapi:${var.imagebuild}"
        cpu = "1"
        memory = "1"
 
